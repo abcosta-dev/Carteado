@@ -1,2 +1,37 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿List<int> baralho = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
+
+
+
+List<int> embaralhar(List<int> baralho)
+{
+    var rand = new Random();
+    return baralho.OrderBy(x => rand.Next()).ToList();
+}
+
+int darCarta(List<int> baralho)
+{
+    int posicaoPrimeiraCarta = 0;
+    int carta = baralho[posicaoPrimeiraCarta];
+    baralho.RemoveAt(posicaoPrimeiraCarta);
+    return carta;
+}
+
+List<int> baralhoEmbaralhado = embaralhar(baralho);
+int carta1 = darCarta(baralhoEmbaralhado);
+int carta2 = darCarta(baralhoEmbaralhado);
+
+var jogador1 = carta1;
+var jogador2 = carta2;
+
+if (jogador1 > jogador2)
+{
+    Console.WriteLine($"Jogador 1 venceu com a carta {jogador1} contra {jogador2}");
+}
+else if (jogador1 < jogador2)
+{
+    Console.WriteLine($"Jogador 2 venceu com a carta {jogador2} contra {jogador1}");
+}
+else
+{
+    Console.WriteLine($"Empate! Ambos os jogadores jogaram a carta {jogador1}");
+}
