@@ -23,11 +23,11 @@ var jogador2 = carta2;
 
 if (jogador1 > jogador2)
 {
-    Console.WriteLine($"Jogador 1 venceu com a carta {jogador1} vs carta: {jogador2}");
+    Console.WriteLine($"Jogador 1 venceu com a carta {jogador1} vs Jogador 2 com a carta: {jogador2}");
 }
 else if (jogador2 > jogador1)
 {
-    Console.WriteLine($"Jogador 2 venceu com a carta {jogador2} vs carta: {jogador1}");
+    Console.WriteLine($"Jogador 2 venceu com a carta {jogador2} vs Jogador 2 com a carta: {jogador1}");
 }
 else
 {
