@@ -27,7 +27,7 @@ if (jogador1 > jogador2)
 }
 else if (jogador2 > jogador1)
 {
-    Console.WriteLine($"Jogador 2 venceu com a carta {jogador2} vs Jogador 2 com a carta: {jogador1}");
+    Console.WriteLine($"Jogador 2 venceu com a carta {jogador2} vs Jogador 1 com a carta: {jogador1}");
 }
 else
 {
