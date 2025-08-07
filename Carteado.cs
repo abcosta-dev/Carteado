@@ -1,4 +1,14 @@
-List<int> baralho = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 };
+int tamanhoBaralho = 100;
+
+List<int> criarBaralho(int tamanho)
+{
+    var baralho = new List<int>();
+    for (int i = 1; i <= tamanho; i++)
+    {
+        baralho.Add(i);
+    }
+    return baralho;
+}
 
 List<int> embaralhar(List<int> baralho)
 {
@@ -14,6 +24,7 @@ int darCarta(List<int> baralho)
     return carta;
 }
 
+var baralho = criarBaralho(tamanhoBaralho);
 List<int> baralhoEmbaralhado = embaralhar(baralho);
 int carta1 = darCarta(baralhoEmbaralhado);
 int carta2 = darCarta(baralhoEmbaralhado);
