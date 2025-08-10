@@ -1,1 +1,1 @@
-var baralho = new Baralho();
+var baralho = new Baralho(100);

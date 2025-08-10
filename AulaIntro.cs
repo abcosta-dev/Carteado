@@ -2,8 +2,6 @@ class AulaIntro
 {
     public void Rodar()
     {
-
-
         int tamanhoBaralho = 100;
 
         List<int> criarBaralho(int tamanho)
@@ -18,7 +16,7 @@ class AulaIntro
 
         List<int> embaralhar(List<int> baralho)
         {
-            Random rand = new Random();
+            var rand = new Random();
             return baralho.OrderBy(x => rand.Next()).ToList();
         }
         int darCarta(List<int> baralho)
