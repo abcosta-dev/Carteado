@@ -21,7 +21,6 @@ class AulaIntro
             Random rand = new Random();
             return baralho.OrderBy(x => rand.Next()).ToList();
         }
-
         int darCarta(List<int> baralho)
         {
             int posicaoPrimeoraCarta = 0;
@@ -31,7 +30,9 @@ class AulaIntro
         }
 
         var baralho = criarBaralho(tamanhoBaralho);
+        
         List<int> baralhoEmbaralhado = embaralhar(baralho);
+
         int carta1 = darCarta(baralhoEmbaralhado);
         int carta2 = darCarta(baralhoEmbaralhado);
 

@@ -14,6 +14,11 @@ class Baralho
 {
     List<Carta> Cartas;
 
+    public Baralho()
+    {
+        Console.WriteLine("Criando baralho...");
+    }
+
     Carta DarCarta()
     {
         int posicaoPrimeoraCarta = 0;

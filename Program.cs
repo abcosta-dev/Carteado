@@ -1,2 +1,1 @@
-var intro = new AulaIntro();
-intro.Rodar();
+var baralho = new Baralho();
