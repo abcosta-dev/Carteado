@@ -1,13 +1,16 @@
 class Carta
 {
     public int Valor;
-
+    public Carta(int valor)
+    {
+        Valor = valor;
+    }
 }
 
 class Jogador
 {
 
-    public Carta Carta;
+    public Carta Carta{ get; set; }
 }
 
 class Baralho
@@ -15,12 +18,12 @@ class Baralho
     List<Carta> Cartas;
 
     public Baralho()
-    {
+    { 
         var baralho = new List<Carta>();
 
         for (int i = 1; i <= 100; i++)
         {
-            baralho.Add(new Carta());
+            baralho.Add(new Carta(i));
 
 
         }
@@ -32,18 +35,19 @@ class Baralho
 
         for (int i = 1; i <= tamanho; i++)
         {
-            baralho.Add(new Carta());
+            baralho.Add(new Carta(i));
         }
         Cartas = baralho;
     }
-    Carta DarCarta()
+
+    public Carta DarCarta()
     {
         int posicaoPrimeoraCarta = 0;
         Carta carta = Cartas[posicaoPrimeoraCarta];
         Cartas.RemoveAt(posicaoPrimeoraCarta);
         return carta;
     }
-    void Embaralhar()
+    public void Embaralhar()
     {
         var rand = new Random();
         Cartas = Cartas.OrderBy(x => rand.Next()).ToList();
@@ -74,6 +78,15 @@ class Jogo
         Baralho = baralho;
         Jogador1 = jogador1;
         Jogador2 = jogador2;
+    }
+
+    public void Jogar()
+    {
+        Baralho.Embaralhar();
+        Jogador1 .Carta = Baralho.DarCarta();
+        Jogador2.Carta = Baralho.DarCarta();
+
+        VerificarGanhador();
     }
 
     void VerificarGanhador()
