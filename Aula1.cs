@@ -10,7 +10,7 @@ class Carta
 class Jogador
 {
 
-    public Carta Carta{ get; set; }
+    public Carta Carta { get; set; }
 }
 
 class Baralho
