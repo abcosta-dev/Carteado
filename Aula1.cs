@@ -6,13 +6,10 @@ class Carta
         Valor = valor;
     }
 }
-
 class Jogador
 {
-
     public Carta Carta { get; set; }
 }
-
 class Baralho
 {
     List<Carta> Cartas;
@@ -24,8 +21,6 @@ class Baralho
         for (int i = 1; i <= 100; i++)
         {
             baralho.Add(new Carta(i));
-
-
         }
         Cartas = baralho;
     }
@@ -39,7 +34,6 @@ class Baralho
         }
         Cartas = baralho;
     }
-
     public Carta DarCarta()
     {
         int posicaoPrimeoraCarta = 0;
@@ -53,20 +47,17 @@ class Baralho
         Cartas = Cartas.OrderBy(x => rand.Next()).ToList();
     }
 }
-
 class Jogo
 {
     Baralho Baralho;
     Jogador Jogador1;
     Jogador Jogador2;
-
     public Jogo()
     {
         Baralho = new Baralho();
         Jogador1 = new Jogador();
         Jogador2 = new Jogador();
     }
-
     public Jogo(Baralho baralho)
     {
         Baralho = baralho;
@@ -79,7 +70,6 @@ class Jogo
         Jogador1 = jogador1;
         Jogador2 = jogador2;
     }
-
     public void Jogar()
     {
         Baralho.Embaralhar();
@@ -88,7 +78,6 @@ class Jogo
 
         VerificarGanhador();
     }
-
     void VerificarGanhador()
     {
         if (Jogador1.Carta.Valor > Jogador2.Carta.Valor)
