@@ -7,6 +7,7 @@ class AulaIntro
         List<int> criarBaralho(int tamanho)
         {
             var baralho = new List<int>();
+            
             for (int i = 1; i <= tamanho; i++)
             {
                 baralho.Add(i);
