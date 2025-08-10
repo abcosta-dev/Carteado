@@ -1,2 +1,2 @@
-new AulaIntro();
-new AulaIntro().Rodar();
+var intro = new AulaIntro();
+intro.Rodar();
